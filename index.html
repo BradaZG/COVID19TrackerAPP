@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/fe499f66d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>COVID Tracker</title>
+</head>
+
+<body>
+    <div class="nav">
+        <h1>COVID 19 Tracker APP</h1>
+        <div class="search">
+            <i id="search-icon" class="fas fa-search fa-flip-horizontal" onclick="getCountryData()"></i>
+            <input id="search-country" type="text" placeholder="Type a country name" onkeyup="onEnter(event)" />
+        </div>
+    </div>
+    <div class="map-info">
+        <div id="map"></div>
+        <div class="country-stats">
+            <h3 id="country"></h3>
+            <div id="flag"></div>
+            <div id="today-country-cases"></div>
+            <div id="today-country-deaths"></div>
+            <div id="active-cases"></div>
+        </div>
+        <div class="global-stats">
+            <h3>GLOBAL STATS</h3>
+            <div id="total-cases"></div>
+            <div id="total-deaths"></div>
+            <div id="total-recoveries"></div>
+        </div>
+    </div>
+    <div class="data-info"></div>
+
+    <script type='text/javascript' src='js/config.js'></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
