@@ -27,7 +27,7 @@ window.onload = function () {
     getCountryMarkers();
 }
 
-getCountryMarkers = () => {
+const getCountryMarkers = () => {
     const FULL_URL = "https://corona.lmao.ninja/v2/countries?yesterday=&sort=";
 
     const globalPromise = fetch(FULL_URL);
@@ -39,7 +39,7 @@ getCountryMarkers = () => {
     });
 }
 
-getGlobalData = () => {
+const getGlobalData = () => {
 
     const FULL_URL = `${URL}all?yesterday=`;
 
@@ -52,7 +52,7 @@ getGlobalData = () => {
     });
 }
 
-showGlobalData = (globalData) => {
+const showGlobalData = (globalData) => {
 
     document.getElementById('total-cases').innerText = `TOTAL CASES: ${globalData.cases}`;
     document.getElementById('total-deaths').innerText = `TOTAL DEATHS: ${globalData.deaths}`;
@@ -65,7 +65,7 @@ const onEnter = (e) => {
     }
 }
 
-getCountryData = (country = "") => {
+const getCountryData = (country = "") => {
     if (country == "") {
         country = document.getElementById('search-country').value;
     }
@@ -81,7 +81,7 @@ getCountryData = (country = "") => {
     });
 }
 
-showCountryData = (countryData) => {
+const showCountryData = (countryData) => {
     document.getElementById('country').innerText = `${countryData.country.toUpperCase()}`;
     document.getElementById('flag').innerHTML = `<img src='${countryData.countryInfo.flag}' alt='Country flag'>`;
     document.getElementById('today-country-cases').innerText = `NEW CASES: ${countryData.todayCases}`;
